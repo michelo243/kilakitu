@@ -76,6 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ),
                         ),
+                        SizedBox(height: 20.0),
                         TextField(
                           decoration: InputDecoration(
                             labelText: 'Password',
@@ -89,12 +90,112 @@ class _MyHomePageState extends State<MyHomePage> {
                             )
                           ),
                           obscureText: true,
-                        )
+                        ),
+                        SizedBox(height: 5.0),
+                        Container(
+                          alignment: Alignment(1.0, 0.0),
+                          padding: EdgeInsets.only(top:15.0,left:20.0),
+                          child: InkWell(
+                            child: Text('Forgot Password',
+                            style: TextStyle(
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue,
+                              fontFamily: 'GoogleSans',
+                              decoration: TextDecoration.underline
+                              ),
+                          ),
+                        ),
+                        ),
+                        SizedBox(height: 40.0),
+                        Container(
+                            height: 40.0,
+                            child:Material(
+                                borderRadius: BorderRadius.circular(20.0),
+                                shadowColor: Colors.blueAccent,
+                                color: Colors.blueGrey,
+                                elevation: 7.0,
+                                child: GestureDetector(
+                                  onTap:(){
+
+                                  },
+                                  child: Center(
+                                    child:Text('Login', style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'GoogleSans',
+                                        fontSize: 20.0
+                                    ),
+                                    ),
+                                  ),
+                                ),
+                            ),
+                        ),
+                        SizedBox(height:20.0 ),
+                        Container(
+                          height: 40.0,
+                          color: Colors.transparent,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                color: Colors.black,
+                                style: BorderStyle.solid,
+                                width: 1.0
+                              ),
+                              color: Colors.transparent,
+                              borderRadius: BorderRadius.circular(20.0)
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Center(
+                                  child: ImageIcon(
+                                    AssetImage('assets/google.png')
+                                    )
+                                    ),
+                                SizedBox(width: 10.0),
+                                Center(
+                                  child: Text('Log In with Google',
+                                  style:TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontFamily: 'GoogleSans'
+                                  ),
+                                  ),
+                                  ),
+                              ],
+                            ),
+                          ),
+                        ),
                      ],
                    ),
                  )
                 ],
               ),
+            ),
+            SizedBox(height: 15.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  'New to KilaKitu App ?',
+                  style: TextStyle(
+                    fontFamily: 'GoogleSans',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(width: 15.0),
+                InkWell(
+                  onTap: (){},
+                  child:Text('Register',
+                  style:TextStyle(
+                    color: Colors.blueAccent,
+                    fontFamily:'GoogleSans',
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.underline
+                  )
+                  ),
+                ),
+              ],
             )
           ],
         )
